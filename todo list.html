@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Notes</title>
+    <style>
+      *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#titlebox{
+    margin-top: 3rem;
+}
+#titlebox h2{
+    color: goldenrod;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 0.2rem;
+}
+#titlebox input{
+    width: 30%;
+    display: block;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 6px;
+}
+body {
+    background-color: black;
+}
+.nav{
+    background-color: rgb(100, 100, 100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid goldenrod;
+}
+
+.nav a{
+    text-decoration: none;
+    color:white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav a:hover{
+   background-color:black;
+   color: rgb(26, 196, 26);
+   border-radius: 0.5rem;
+}
+
+
+.nav span{
+    display: inline-block;
+    font-size: 2.5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: goldenrod;
+    font-weight: 700;
+    padding: 1rem 1rem;
+    font-style: italic;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.nav input {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-align: center;
+    border: 2px solid black;
+    padding: 0.3rem;
+}
+.nav button {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.7rem;
+    background-color: black;
+    color:whitesmoke;
+    font-weight: 600;
+}
+
+.nav input:hover {
+    font-size: 1.3rem;
+}
+
+.nav button:hover {
+    background-color: black;
+    color: rgb(26, 196, 26);
+    border: 2px solid rgb(26, 196, 26);
+    font-size:1.3rem;
+}
+.cont {
+   width: 70%;
+   margin: 1rem auto;
+}
+
+.cont h1{
+   color: white;
+   text-align:center;
+   font-size: 2.8rem;
+   margin-top: 3rem;
+}
+
+.andar textarea {
+   width: 100%;
+   border-radius: 10px;
+   font-size: 1.4rem;
+   padding: 0.3rem;
+}
+#adbtn {
+    display: block; 
+    margin: 1rem auto;
+    font-size: 1rem;
+    padding: 0.3rem;
+    color: white;
+    font-weight: 600;
+    background-color: grey;
+    border-radius: 8px;
+    border: 2px solid goldenrod;
+}
+#adbtn:hover{
+    font-size: 1.3rem;
+    border: 2px solid white;
+    background-color: black;
+    border: 2px solid rgb(26, 196, 26);
+    color:rgb(26, 196, 26);
+}
+#tobox h1{
+    font-size: 2.5rem;
+}
+#idhrdaal{
+   margin-top: 2rem;
+}
+.note1{
+    background-color: black;
+    margin:0.4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid rgb(99, 99, 99);
+    position: relative;
+    animation: ruk 0.3s linear 1;
+}
+@keyframes incoming {
+    0%{
+        left: -50vw;
+    }
+    100%{
+        left: 4vw;
+    }
+}
+.note1 h2{
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    margin-left: 1rem;
+    width: 16%;
+    padding: 1rem;
+    
+}
+.note1 p{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    font-family:sans-serif;
+    padding: 1rem;
+    text-align: justify;
+    font-size: 1.1rem;
+    margin:0.3rem;
+    width: 70%;
+    font-weight: 600;
+    border-radius: 5px;
+    color:goldenrod;
+    background-color:black;
+}
+.deletenote{
+    display: block;
+    padding:0.2rem 0.4rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 6px;
+    margin-right: 0.7rem;
+    
+}
+.deletenote:hover{
+    font-size: 1.3rem;
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+}
+
+#invisible{
+    color: goldenrod;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+@keyframes delete{
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+.left{  
+        width: 35%;
+    }
+    .right {
+        display: flex;
+        width: 35%;
+        justify-content:flex-end;
+    }
+    .mid {
+        display: flex;
+        justify-content: center;
+    }
+@media screen and (max-width: 1100px)
+{
+    .nav span{
+        font-size: 2rem;
+        text-align: center;
+
+    }
+    .nav a{
+        font-size: 3rem;
+    }
+
+    .nav input {
+        font-size: 1rem;
+        width: 25%;
+    }
+     .cont h1{
+         margin-top: 6rem;
+     }
+     .cont textarea {
+         height: 12vh;
+         border-radius: 17px;
+     }
+    .nav input:hover {
+        font-size: 1rem;
+        width: 50%;
+    }
+    
+}
+
+#oops {
+background-color: black;
+color: goldenrod;
+text-align: center;
+margin-top: 4vh;
+font-size: 1.6rem;
+display: none;
+}
+    
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            <span>My Notes</span>
+        </div>
+        <div class="mid"><a href="#">Home</a></div>
+        
+        <div class="right">
+            <input id="search" type="text" placeholder="Type your text">
+            <button>Search</button>
+        </div>
+    </div>
+
+
+    <div class="cont">
+        <h1>Welcome to MyNotes.com</h1>
+        <div id="titlebox">
+            <h2>Add Title</h2>
+            <input id="title" type="text">
+        </div>
+        <div class="andar">
+            <h2>Add a Note</h2>
+            <textarea name="" id="textarea" cols="30" rows="4"></textarea>
+            <button id="adbtn">Add Note</button>
+        </div>
+
+        <div id="tobox">
+            <h1>Your Notes</h1>
+              <p id="oops">OOPS !! No matches found from Your Search..</p>
+             <div id="idhrdaal">
+                 
+             </div>
+        </div>
+    </div>
+
+    <script>
+     
+
+
+let adbtn = document.getElementById('adbtn');
+let narray = [];
+shownotes(1);
+adbtn.addEventListener('click', function (e) {
+    let addtxt = document.getElementById('textarea');
+    let addtitle = document.getElementById('title');
+    let notes = localStorage.getItem("notes");
+
+    if (notes != null) {
+        narray = JSON.parse(notes);
+    }
+    if (addtitle.value!='' && addtxt.value != '') {
+
+        let obj = {
+            title : addtitle.value,
+            text : addtxt.value
+        }
+
+        narray.push(obj);
+        localStorage.setItem("notes", JSON.stringify(narray));
+        addtxt.value = "";
+        addtitle.value = "";
+    }
+    shownotes();
+})
+
+function shownotes(c) {
+    let notes = localStorage.getItem("notes");
+
+    if (notes != null) {
+        narray = JSON.parse(notes);
+    }
+
+
+
+    html = "";
+    let n=narray.length;
+    for(var i=0;i<n;i++)
+    {
+        ele=narray[i];
+         html += `
+        <div id="${i+100001}" class="note1">
+            <h2> ${ele.title} </h2>
+            <p> ${ele.text} </p>
+            <button onclick="deleting(this.id)" id="${i}" class="deletenote">Delete</button>
+        </div> 
+    `;
+    }
+    
+    
+
+
+
+    if (html != "") {
+        document.getElementById('idhrdaal').innerHTML = html;
+        if(c != 1)
+        {
+        document.getElementById(n-1+100001).style.animationName="incoming";
+        setTimeout(() => {
+            document.getElementById(n-1+100001).style.animationName="ruk";
+        }, 400);
+       }
+    }
+    else {
+        document.getElementById('idhrdaal').innerHTML = `<p id="invisible">Your NoteList is Empty !! Please Use Add Note Button to Add Notes .</p>`
+    }
+}
+function deleting(id) {
+   
+   let temp= parseInt(id)+100001;
+   console.log(temp);
+   let x=document.getElementById(temp);
+   x.style.animationName="delete";
+   x.style.animationTimingFunction="linear";
+   x.style.animationDuration="0.5s";
+   x.style.animationIterationCount="1";
+    
+    setTimeout(() => {
+    narray.splice(id, 1);
+    localStorage.setItem("notes", JSON.stringify(narray));
+    shownotes(1);
+    }, 400);
+    
+}
+
+
+let searching = document.getElementById('search');
+
+searching.addEventListener('input', function () {
+
+    let allclass = document.getElementsByClassName('note1');
+    var oops = 0;
+    
+    Array.from(allclass).forEach(function (element) {
+        
+        let para = element.querySelector('p').innerText.toLocaleLowerCase();
+        let heading = element.querySelector('h2').innerText.toLocaleLowerCase();
+        if (para.includes(searching.value.toLocaleLowerCase())   ||  heading.includes(searching.value.toLocaleLowerCase()) ) 
+        {
+            element.style.display = "flex";
+            element.style.backgroundColor = 'rgb(63, 63, 63)';
+            setTimeout(() => {
+                element.style.backgroundColor = 'black';
+            }, 3000);
+        }
+        else {
+            element.style.display = "none";
+            oops++;
+        }
+    })
+
+    if(oops==allclass.length && allclass.length!=0)
+    {
+        document.getElementById('oops').style.display="block";
+    }
+    else{
+        document.getElementById('oops').style.display="none";
+    }
+
+})
+    </script>
+</body>
+
+</html>
